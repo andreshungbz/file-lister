@@ -1,4 +1,4 @@
-#include <filesystem>
+#include "file-utils.h"
 #include <iostream>
 
 std::filesystem::path getDirectory() {
@@ -27,9 +27,4 @@ void listFiles(const std::filesystem::path& directory) {
             std::cout << entry.path().filename().string() << '\n';
         }
     }
-}
-
-int main() {
-    listFiles(getDirectory());
-    return 0;
 }
