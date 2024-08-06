@@ -24,7 +24,7 @@ std::filesystem::path getDirectory() {
 void listFiles(const std::filesystem::path& directory) {
     for (const auto& entry : std::filesystem::recursive_directory_iterator(directory)) {
         if (std::filesystem::is_regular_file(entry)) {
-            std::cout << entry.path().filename() << '\n';
+            std::cout << entry.path().filename().string() << '\n';
         }
     }
 }
